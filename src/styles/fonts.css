@@ -1,0 +1,20 @@
+/*
+ * Typography
+ * - Chữ: Playfair Display (có subset tiếng Việt).
+ * - Số: Lora — serif, số "lining" dễ đọc, hòa hợp với Playfair.
+ *   Playfair mặc định dùng số kiểu cũ (old-style) nên giá tiền khó đọc;
+ *   font "Giftly Digits" chỉ chứa dải ký tự 0-9 nên số tự động dùng Lora
+ *   ở mọi nơi mà không cần gắn class thủ công.
+ */
+@import '@fontsource-variable/playfair-display/index.css';
+@import '@fontsource-variable/playfair-display/wght-italic.css';
+
+@font-face {
+  font-family: 'Giftly Digits';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource-variable/lora/files/lora-latin-wght-normal.woff2')
+    format('woff2-variations');
+  unicode-range: U+0030-0039, U+002C, U+002E;
+}
